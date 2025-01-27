@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #f0f0f0;
         }
+
         header {
             display: flex;
             justify-content: space-between;
@@ -18,68 +21,96 @@
             padding: 10px 20px;
             border-bottom: 1px solid #000;
         }
+
         header h1 {
             margin: 0;
         }
+
         .search-container {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .search-container input[type="text"] {
             padding: 5px;
             width: 200px;
         }
+
         .logo-image {
-        width: 50px;          
-        height: 50px;         
-        object-fit: contain;  
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
         }
+
         main {
-            padding: 20px;
+            padding: 30px;
         }
+
         .cards-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: auto auto;
             gap: 20px;
-            margin-top: 20px;
+            margin-top: 30px;
         }
-        .card {
+
+        .text-box {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #000;
+            justify-content: flex-start;
+            align-items: flex-start;
+            border: 1px solid #ccc;
             border-radius: 10px;
-            padding: 10px;
-            height: 200px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        .card .title {
+
+        .text-box .title {
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #333;
         }
-        .card .content {
-            text-align: center;
+
+        .text-box .content p {
+            margin: 8px 0;
+            font-size: 14px;
+            color: #555;
         }
-        .card-image img {
+
+        .image-box {
+            border: 1px solid #ccc;
+            border-radius: 10px;
             width: 100%;
-            height: 100%;
+            height: auto;
+            padding: 0;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
             object-fit: cover;
             border-radius: 10px;
         }
+
         footer {
             margin-top: 20px;
             text-align: center;
             padding: 10px;
             border-top: 1px solid #000;
         }
+
         .footer-buttons {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin-top: 20px;
         }
+
         .footer-buttons button {
             padding: 10px;
             cursor: pointer;
@@ -89,11 +120,13 @@
             border-radius: 5px;
             font-size: 14px;
         }
+
         .footer-buttons button:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Welt Rangliste</h1>
@@ -102,28 +135,40 @@
             <button>🔍</button>
             <a href="Homepage_Dominik.html">
                 <img src="logo.png" alt="Logo" class="logo-image">
-            </a>            
+            </a>
         </div>
     </header>
 
     <main>
         <div class="cards-container">
-            <div class="card">
+            <div class="text-box">
                 <div class="title">Damen</div>
-                <div class="content">Unterthema1</div>
+                <div class="content">
+                    <p>Platz 1: Federica Brignone (FRA 🇮🇹) - 799</p>
+                    <p>Platz 2: Lara Gut-Behrami (SUI 🇨🇭) - 729</p>
+                    <p>Platz 3: Camille Rast (SUI 🇨🇭) - 562</p>
+                    <p>Platz 4: Sofia Goggia (FRA 🇮🇹) - 551</p>
+                    <p>Platz 5: Sara Hector (SWE 🇸🇪) - 507</p>
+                </div>
             </div>
 
-            <div class="card">
+            <div class="text-box">
                 <div class="title">Herren</div>
-                <div class="content">Unterthema2</div>
+                <div class="content">
+                    <p>Platz 1: Marco Odermatt (SUI 🇨🇭) - 1006</p>
+                    <p>Platz 2: Henrik Kristoffersen (NOR 🇳🇴) - 634</p>
+                    <p>Platz 3: Loic Meillard (SUI 🇨🇭) - 542</p>
+                    <p>Platz 4: Atle Lie McGrath (NOR 🇳🇴) - 482</p>
+                    <p>Platz 5: Franjo von Allmen (SUI 🇨🇭) - 470</p>
+                </div>
             </div>
 
-            <div class="card card-image">
-                <img src="image1.jpg" alt="Bild Damen">
+            <div class="image-box">
+                <img src="Federika Brignone.jpg" alt="Bild Damen">
             </div>
 
-            <div class="card card-image">
-                <img src="image2.jpg" alt="Bild Herren">
+            <div class="image-box">
+                <img src="Marco Odermatt.jpg" alt="Bild Herren">
             </div>
         </div>
     </main>
@@ -137,4 +182,5 @@
         <p>&copy; 2025 Snow Horizon. Alle Rechte vorbehalten.</p>
     </footer>
 </body>
+
 </html>

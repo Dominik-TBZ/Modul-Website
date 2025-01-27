@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,76 +12,102 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         header {
             display: flex;
-            justify-content: space-between; 
+            justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
             border-bottom: 1px solid #000;
         }
+
         header h1 {
             margin: 0;
         }
+
         .search-container {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .search-container input[type="text"] {
             padding: 5px;
             width: 200px;
         }
+
         .logo-image {
-        width: 50px;
-        height: 50px;         
-        object-fit: contain;  
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
         }
+
         main {
             padding: 20px;
         }
+
         .cards-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             margin-top: 20px;
         }
+
         .card {
-            height: 200px;
+            height: 230px; /* Adjusted card height */
             border: 1px solid #000;
             border-radius: 10px;
             text-align: center;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
+            padding: 10px;
+            background-color: white;
         }
+
+        .card img {
+            width: 100%;
+            height: 180px; /* Increased image height */
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px; /* Space between image and text */
+        }
+
+        .card p {
+            margin-top: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+
         footer {
             margin-top: 20px;
             text-align: center;
             padding: 10px;
             border-top: 1px solid #000;
         }
+
         .footer-buttons {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin-top: 20px;
         }
+
         .footer-buttons button {
             padding: 10px;
             cursor: pointer;
-            background-color: #007BFF; /* Blau */
+            background-color: #007BFF;
             color: white;
             border: none;
             border-radius: 5px;
             font-size: 14px;
         }
+
         .footer-buttons button:hover {
             background-color: #0056b3;
         }
-        .logos {
-            margin-top: 20px;
-            text-align: center;
-        }
+
         footer p {
             color: black;
             font-size: 16px;
@@ -88,6 +115,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Swiss Ski Team</h1>
@@ -95,21 +123,45 @@
             <input type="text" placeholder="Suchen">
             <button>🔍</button>
             <a href="Homepage_Dominik.html">
-                <img src="logo.png" alt="Logo" class="logo-image">        
+                <img src="logo.png" alt="Logo" class="logo-image">
             </a>
         </div>
     </header>
 
     <main>
         <div class="cards-container">
-            <div class="card">Person1</div>
-            <div class="card">Person2</div>
-            <div class="card">Person3</div>
-            <div class="card">Person4</div>
-            <div class="card">Person5</div>
-            <div class="card">Person6</div>
-            <div class="card">Person7</div>
-            <div class="card">Person8</div>
+            <div class="card">
+                <img src="Lara Gut-Berahmi.jpg" alt="Lara Gut-Behrami">
+                <p>Lara Gut-Behrami</p>
+            </div>
+            <div class="card">
+                <img src="Corinne Suter.jpg" alt="Corinne Suter">
+                <p>Corinne Suter</p>
+            </div>
+            <div class="card">
+                <img src="Melanie Meillard.jpg" alt="Melanie Meillard">
+                <p>Melanie Meillard</p>
+            </div>
+            <div class="card">
+                <img src="Michelle Gisin.jpg" alt="Michelle Gisin">
+                <p>Michelle Gisin</p>
+            </div>
+            <div class="card">
+                <img src="Marco Odermatt2.jpg" alt="Marco Odermatt">
+                <p>Marco Odermatt</p>
+            </div>
+            <div class="card">
+                <img src="Loic Meillard.jpg" alt="Loic Meillard">
+                <p>Loic Meillard</p>
+            </div>
+            <div class="card">
+                <img src="franjo-von-allmen.jpg" alt="Franjo von Allmen">
+                <p>Franjo von Allmen</p>
+            </div>
+            <div class="card">
+                <img src="Thomas Tumler.jpg" alt="Thomas Tumler">
+                <p>Thomas Tumler</p>
+            </div>
         </div>
     </main>
 
@@ -122,4 +174,5 @@
         <p>&copy; 2025 Snow Horizon. Alle Rechte vorbehalten.</p>
     </footer>
 </body>
+
 </html>
