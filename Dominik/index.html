@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldeformular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #000;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 5px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-container button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: #007BFF;
+        }
+
+        .logo-placeholder img {
+            width: 50px;
+            height: 50px;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .footer-buttons button {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); 
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            if (!email || !password) {
+                alert("Bitte füllen Sie beide Felder aus.");
+                return;
+            }
+
+            window.location.href = "Homepage_Dominik.html";
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Willkommen</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Suchen">
+            <button>🔍</button>
+            <div class="logo-placeholder">
+                <img src="logo.png" alt="Logo">
+            </div>
+        </div>
+    </header>    
+
+    <main>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <h2>Anmelden</h2>
+
+            <label for="email">Login / E-Mail:</label>
+            <input type="text" id="email" name="email" placeholder="Geben Sie Ihre E-Mail-Adresse ein" required>
+
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password" placeholder="Geben Sie Ihr Passwort ein" required>
+
+            <button type="submit">Anmelden</button>
+        </form>
+    </main>
+    <footer style="text-align: center; padding: 20px; background-color: #f1f1f1; border-top: 1px solid #ccc;">
+        <p>&copy; 2025 Snow Horizon. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+</html>
