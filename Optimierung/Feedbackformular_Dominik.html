@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über mich</title>
+    <title>Feedbackformular</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            color: black; 
         }
         header {
             display: flex;
@@ -21,7 +20,7 @@
         }
         header h1 {
             margin: 0;
-            color: black; 
+            text-transform: uppercase; 
         }
         .search-container {
             display: flex;
@@ -42,27 +41,60 @@
             border: 1px solid #000;
         }
         .logo-image {
-            width: 50px;
+            width: 50px; 
             height: 50px;
             object-fit: contain;
         }
         main {
             padding: 20px;
+            display: flex;
+            justify-content: center;
         }
-        .bio-section {
-            max-width: 800px;
+        form {
+            width: 100%;
+            max-width: 600px;
             margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 30px; 
+            border-radius: 10px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px; 
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 120px; 
+        }
+        .submit-container {
             text-align: center;
         }
-        .bio-section h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .bio-section p {
+        .submit-container button {
+            padding: 14px 25px; 
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
             font-size: 16px;
-            line-height: 1.6;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
+        .submit-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
         footer {
             margin-top: 20px;
             text-align: center;
@@ -97,7 +129,7 @@
 </head>
 <body>
     <header>
-        <h1>ÜBER MICH</h1>
+        <h1>FEEDBACKFORMULAR</h1>
         <div class="search-container">
             <input type="text" placeholder="Suchen">
             <button>🔍</button>
@@ -106,16 +138,24 @@
             </a>
         </div>
     </header>
+    
     <main>
-        <div class="bio-section">
-            <h2>Hallo, ich bin Dominik!</h2>
-            <p>Ich bin ein leidenschaftlicher Entwickler mit einem Fokus auf Webtechnologien, und genauso leidenschaftlich bin ich für den Skisport. Mit meiner Erfahrung in HTML, CSS, JavaScript und modernen Frameworks baue ich nicht nur leistungsstarke und benutzerfreundliche Webseiten, sondern versuche auch, die gleiche Präzision und Effizienz zu erreichen, die ich auf der Skipiste schätze.</p>
+        <form id="feedbackForm" onsubmit="validateAndSubmit(event)">
+            <label for="name">Ihr Name:</label>
+            <input type="text" id="name" name="name" placeholder="Geben Sie Ihren Namen ein" required>
 
-            <p>In meiner Freizeit bin ich sowohl auf den neuesten Technologien als auch auf den besten Pisten unterwegs. Während ich mich ständig weiterbilde und neue Entwicklungen in der Webentwicklung verfolge, genieße ich auch die Herausforderung, mich ständig zu verbessern – sei es beim Programmieren oder beim Skifahren.</p>
+            <label for="email">Ihre E-Mail-Adresse:</label>
+            <input type="text" id="email" name="email" placeholder="Geben Sie Ihre E-Mail-Adresse ein" required>
 
-            <p>Meine Leidenschaft für das Programmieren geht über das Erstellen von Webseiten hinaus. Ich arbeite gerne an Open-Source-Projekten und teile meine Erfahrungen mit der Entwicklergemeinschaft, ähnlich wie beim Austausch von Skitechniken – immer darauf bedacht, mein Wissen und meine Fähigkeiten weiterzugeben.</p>
-        </div>
+            <label for="feedback">Ihr Feedback:</label>
+            <textarea id="feedback" name="feedback" placeholder="Teilen Sie uns Ihr Feedback mit" required></textarea>
+
+            <div class="submit-container">
+                <button type="submit">Abschicken</button>
+            </div>
+        </form>
     </main>
+    
     <footer>
         <div class="footer-buttons">
             <a href="Feedbackformular_Dominik.html"><button>Feedback Formular</button></a>
@@ -124,5 +164,28 @@
         </div>
         <p>&copy; 2025 Snow Horizon. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script>
+        function validateAndSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const feedback = document.getElementById("feedback").value.trim();
+
+            if (!name || !email || !feedback) {
+                alert("Bitte füllen Sie alle Felder aus.");
+                return;
+            }
+
+            if (!email.includes("@")) {
+                alert("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
+                return;
+            }
+
+            alert("Vielen Dank für Ihr Feedback!");
+            document.getElementById("feedbackForm").reset();
+        }
+    </script>
 </body>
 </html>

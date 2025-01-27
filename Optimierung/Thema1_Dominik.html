@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diszipline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #000;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .search-container input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+        .logo-image {
+            width: 50px;          
+            height: 50px;        
+            object-fit: contain; 
+        }
+        main {
+            padding: 20px;
+        }
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 20%;
+            min-width: 250px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 550px; /* Erhöht um 50 Pixel */
+        }
+        .card .title {
+            border-bottom: 1px solid #000;
+            padding: 5px;
+            font-weight: bold;
+        }
+        .card .content {
+            flex-grow: 1;
+            line-height: 1.6;
+            padding: 10px;
+            height: 400px;
+            text-align: center;
+        }
+        .card .separator {
+            border-top: 2px solid red;
+            margin-top: 10px;
+        }
+        .card .leader-info {
+            text-align: center;
+            font-size: 14px;
+            padding-top: 10px;
+        }
+        .footer-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .footer-buttons button {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .footer-buttons button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #000;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diszipline</h1>
+        
+        <div class="search-container">
+            <input type="text" placeholder="Suchen">
+            <button>🔍</button>
+            <a href="Homepage_Dominik.html">
+                <img src="logo.png" alt="Logo" class="logo-image">
+            </a>            
+        </div>
+    </header>
+
+    <main>
+        <div class="cards-container">
+            <div class="card">
+                <div class="title">Slalom</div>
+                <div class="content">Der Slalom ist die technischste und dynamischste Disziplin im Ski Alpin. Mit sehr engen Torabständen müssen die Fahrerinnen und Fahrer schnelle Richtungswechsel und ein präzises, aggressives Fahren zeigen. Jeder Fehler wird sofort bestraft, da die Tore so dicht gesetzt sind, dass es kaum Platz für Korrekturen gibt. Slalom erfordert höchste Beweglichkeit, schnelle Reflexe und eine unerschütterliche Konzentration über zwei Durchgänge hinweg.</div>
+                <div class="separator"></div>
+                <div class="leader-info">
+                    <strong>Weltcup Leader Damen:</strong><br>
+                    Camille Rast (SUI)<br><br>
+                    <strong>Weltcup Leader Herren:</strong><br>
+                    Clément Noël (FRA)
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">Riesenslalom</div>
+                <div class="content">Im Riesenslalom geht es um Technik, Kraft und Timing. Die Tore sind weiter voneinander entfernt als beim Slalom, was eine flüssigere Fahrweise ermöglicht. Die Athletinnen und Athleten müssen das richtige Tempo finden und präzise Carving-Techniken einsetzen, um die Ideallinie zu halten. Ein Fehler kann den Unterschied zwischen Sieg und Niederlage ausmachen, da die Konkurrenz im Riesenslalom extrem hart ist.</div>
+                <div class="separator"></div>
+                <div class="leader-info">
+                    <strong>Weltcup Leader Damen:</strong><br>
+                    Alice Robinson (NZL)<br><br>
+                    <strong>Weltcup Leader Herren:</strong><br>
+                    Marco Odermatt (SUI)
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">Super G</div>
+                <div class="content">Der Super-G kombiniert die Geschwindigkeit der Abfahrt mit den technischen Anforderungen des Riesenslaloms. Die Athletinnen und Athleten müssen auf einer kürzeren Strecke mit engeren Kurven und wechselndem Terrain ihr Tempo kontrollieren und gleichzeitig technische Finesse beweisen. Da es nur eine Besichtigung gibt, müssen die Fahrer auf ihr Gefühl und ihre Erfahrung vertrauen, um die besten Linien zu finden. Hier ist Präzision genauso wichtig wie Geschwindigkeit.</div>
+                <div class="separator"></div>
+                <div class="leader-info">
+                    <strong>Weltcup Leader Damen:</strong><br>
+                    Lara Gut-Behrami (SUI)<br><br>
+                    <strong>Weltcup Leader Herren:</strong><br>
+                    Marco Odermatt (SUI)
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">Abfahrt</div>
+                <div class="content">Die Abfahrt ist die schnellste Disziplin im Ski Alpin und fordert den Athleten alles ab. Mit Geschwindigkeiten von über 130 km/h rasen die Fahrerinnen und Fahrer die steilen Hänge hinab, oft auf eisigen oder unebenem Untergrund. Die Strecke ist lang und wird in der Regel nur einmal besichtigt, was eine perfekte Linienwahl und Mut verlangt. Weite Sprünge und schnelle Richtungswechsel machen diese Disziplin extrem spannend und gefährlich.</div>
+                <div class="separator"></div>
+                <div class="leader-info">
+                    <strong>Weltcup Leader Damen:</strong><br>
+                    Federica Brignone (FRA)<br><br>
+                    <strong>Weltcup Leader Herren:</strong><br>
+                    Marco Odermatt (SUI)
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-buttons">
+            <a href="Feedbackformular_Dominik.html"><button>Feedback Formular</button></a>
+            <a href="Andere Kanäle_Dominik.html"><button>Andere Kanäle</button></a>
+            <a href="Über Mich_Dominik.html"><button>Über mich</button></a>
+        </div>
+        <p>&copy; 2025 Snow Horizon. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>

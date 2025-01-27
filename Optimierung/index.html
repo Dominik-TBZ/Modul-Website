@@ -130,19 +130,11 @@
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value.trim();
 
-            // Überprüfen, ob die E-Mail ein '@' enthält
             if (!email || !password) {
                 alert("Bitte füllen Sie beide Felder aus.");
                 return;
             }
 
-            // Überprüfen, ob die E-Mail-Adresse ein '@' enthält
-            if (!email.includes('@')) {
-                alert("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
-                return;
-            }
-
-            // Wenn alles korrekt ist, wird der Benutzer zur Homepage weitergeleitet
             window.location.href = "Homepage_Dominik.html";
         }
     </script>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ski Alpin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #000;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .nav-buttons button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        /* Hamburger menu */
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            z-index: 10;
+        }
+
+        .hamburger-menu div {
+            width: 30px;
+            height: 4px;
+            background-color: #000;
+            border-radius: 3px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .mobile-menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Container styles */
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .basic-info {
+            width: 30%;
+            padding: 20px;
+            border: 1px solid #000;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .basic-info h2 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .basic-info h2 a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .basic-info p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .image-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%; 
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-top: 1px solid #000;
+        }
+
+        footer p {
+            color: black;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .footer-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .footer-buttons button {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .footer-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .nav-buttons {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: flex; 
+            }
+
+            .mobile-menu.active {
+                display: block; 
+            }
+
+            .container {
+                flex-direction: column; 
+                padding: 10px;
+            }
+
+            .basic-info {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .image-container img {
+                width: 100%;
+                max-height: 200px;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ski_Alpin</h1>
+        <div class="nav-buttons">
+            <a href="Thema1_Dominik.html"><button>Diszipline</button></a>
+            <a href="Thema2_Dominik.html"><button>Welt Rangliste</button></a>
+            <a href="Thema3_Dominik.html"><button>Swiss Ski Team</button></a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Suchen">
+            <button>🔍</button>
+            <a href="Homepage_Dominik.html">
+                <img src="logo.png" alt="Logo" class="logo-image">
+            </a>
+        </div>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="Thema1_Dominik.html">Diszipline</a>
+        <a href="Thema2_Dominik.html">Welt Rangliste</a>
+        <a href="Thema3_Dominik.html">Swiss Ski Team</a>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="basic-info">
+                <h2><a href="Thema1_Dominik.html">Diszipline</a></h2>
+                <h3>Slalom</h3>
+                <p>Der Slalom ist eine der technisch anspruchsvollsten Disziplinen im Ski Alpin, bei der die Athleten durch eine Reihe von Toren slalomen müssen. Es erfordert präzise Wendungen und schnelle Reaktionen, um die besten Zeiten zu erzielen.</p>
+                <h3>Riesenslalom</h3>
+                <p>Der Riesenslalom ist etwas weniger eng gesteckt als der Slalom und ermöglicht höhere Geschwindigkeiten. Die Athleten müssen durch größere Torabstände fahren, wobei Geschwindigkeit und Technik gleichermaßen gefragt sind.</p>
+                <h3>Super-G</h3>
+                <p>Der Super-G kombiniert Elemente der Abfahrt und des Riesenslaloms, wobei die Tore weiter auseinander liegen als beim Slalom, aber die Geschwindigkeit höher ist als im Riesenslalom. Diese Disziplin verlangt sowohl Präzision als auch Mut, da die Kurven schneller genommen werden müssen.</p>
+                <h3>Abfahrt</h3>
+                <p>Die Abfahrt ist die schnellste Disziplin im Ski Alpin, bei der die Athleten die steilsten und anspruchsvollsten Pisten hinabfahren. Hier ist die Fähigkeit, hohe Geschwindigkeiten sicher zu kontrollieren, entscheidend.</p>
+            </div>
+            <div class="basic-info">
+                <h2><a href="Thema2_Dominik.html">Welt Rangliste</a></h2>
+                <h3>Damen</h3>
+                <p>Platz 1: Federica Brignone</p>
+                <p>Platz 2: Lara Gut-Behrami</p>
+                <p>Platz 3: Camille Rast</p>
+                <p>Platz 4: Sofia Goggia</p>
+                <p>Platz 5: Sara Hector</p>
+                <h3>Herren</h3>
+                <p>Platz 1: Marco Odermatt</p>
+                <p>Platz 2: Henrik Kristoffersen</p>
+                <p>Platz 3: Loic Meillard</p> 
+                <p>Platz 4: Atle Lie McGrath</p>
+                <p>Platz 5: Franjo von Allmen</p>  
+                <div class="image-container">
+                    <img src="Podest.jpg" alt="Podest">
+                </div>
+            </div>
+            <div class="basic-info">
+                <h2><a href="Thema3_Dominik.html">Swiss Ski Team</a></h2>
+                <p>Das Schweizer Ski-Team zählt zu den erfolgreichsten im alpinen Skisport. Mit herausragenden Athleten wie Beat Feuz, Lara Gut-Behrami und Wendy Holdener hat das Team bei Weltmeisterschaften und Olympischen Spielen regelmäßig Medaillen gewonnen. Das Team setzt auf eine Kombination aus erfahrenen Sportlern und aufstrebenden Talenten, die durch moderne Trainingsmethoden und Unterstützung aus der Schweizer Ski-Föderation gefördert werden. Mit starkem Ehrgeiz und Disziplin tritt das Team auf internationalen Pisten an und gehört zu den führenden Nationen im alpinen Ski-Weltcup.</p>
+                <div class="image-container">
+                    <img src="Swiss Ski Team.jpg" alt="Swiss Ski Team">
+                </div>
+                <div class="image-container">
+                    <img src="Piste.jpg" alt="Piste">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-buttons">
+            <a href="Feedbackformular_Dominik.html"><button>Feedback Formular</button></a>
+            <a href="Andere Kanäle_Dominik.html"><button>Andere Kanäle</button></a>
+            <a href="Über Mich_Dominik.html"><button>Über mich</button></a>
+        </div>
+        <p>&copy; 2025 Snow Horizon. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

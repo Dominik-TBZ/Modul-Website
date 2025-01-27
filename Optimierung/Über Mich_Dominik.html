@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andere Kanäle</title>
+    <title>Über mich</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,41 +32,54 @@
             padding: 5px;
             width: 200px;
         }
-        .logo-placeholder img {
-            width: 50px;  
+        .logo-placeholder {
+            width: 50px;
             height: 50px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 50px;
+            font-size: 12px;
+            border: 1px solid #000;
+        }
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
         }
         main {
             padding: 20px;
         }
-        .channels-section {
+        .bio-section {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
-        .channels-section h2 {
+        .bio-section h2 {
             margin-bottom: 20px;
-            color: black; 
+            font-size: 24px;
+            font-weight: bold;
         }
-        .channels-section p {
+        .bio-section p {
             font-size: 16px;
             line-height: 1.6;
-            color: black; 
         }
         footer {
             margin-top: 20px;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             background-color: #f1f1f1;
+            border-top: 1px solid #ccc;
         }
         footer p {
-            color: black; 
+            color: #000;
+            font-size: 16px;
+            margin: 0;
         }
         .footer-buttons {
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin-top: 20px;
+            margin-top: 15px;
         }
         .footer-buttons button {
             padding: 10px;
@@ -84,38 +97,32 @@
 </head>
 <body>
     <header>
-        <h1>Andere Kanäle</h1>
+        <h1>ÜBER MICH</h1>
         <div class="search-container">
             <input type="text" placeholder="Suchen">
             <button>🔍</button>
-            <a href="Hompage_Dominik.html">
-                <div class="logo-placeholder">
-                    <img src="logo.png" alt="Logo"> 
-                </div>
+            <a href="Homepage_Dominik.html">
+                <img src="logo.png" alt="Logo" class="logo-image">
             </a>
         </div>
     </header>
     <main>
-        <div class="channels-section">
-            <h2>Andere Kanäle</h2>
-            <p>Hier findest du weitere Kanäle, über die du mehr über meine Projekte und Entwicklungen erfahren kannst.</p>
-            
-            <p>Ich bin auf verschiedenen Plattformen aktiv, um meine Erfahrungen und mein Wissen zu teilen. Du kannst mich auf sozialen Netzwerken wie LinkedIn, GitHub und Twitter finden:</p>
-            
-            <ul>
-                <li>LinkedIn</li>
-                <li>GitHub</li>
-                <li>Twitter</li>
-            </ul>
+        <div class="bio-section">
+            <h2>Hallo, ich bin Dominik!</h2>
+            <p>Ich bin ein leidenschaftlicher Entwickler mit einem Fokus auf Webtechnologien. Ich habe viel Erfahrung mit HTML, CSS, JavaScript und modernen Frameworks, und liebe es, interaktive und benutzerfreundliche Webseiten zu erstellen.</p>
+
+            <p>In meiner Freizeit beschäftige ich mich gerne mit neuen Technologien und versuche, mich ständig weiterzubilden. Ich bin immer auf der Suche nach neuen Herausforderungen, die mir helfen, meine Fähigkeiten weiter zu entwickeln.</p>
+
+            <p>Meine Leidenschaft für das Programmieren geht über das Entwickeln von Webseiten hinaus. Ich genieße es, an Open-Source-Projekten zu arbeiten und meine Erfahrungen mit der Entwicklergemeinschaft zu teilen.</p>
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 Snow Horizon. Alle Rechte vorbehalten.</p>
         <div class="footer-buttons">
             <a href="Feedbackformular_Dominik.html"><button>Feedback Formular</button></a>
             <a href="Andere Kanäle_Dominik.html"><button>Andere Kanäle</button></a>
             <a href="Über Mich_Dominik.html"><button>Über mich</button></a>
         </div>
+        <p>&copy; 2025 Snow Horizon. Alle Rechte vorbehalten.</p>
     </footer>
 </body>
 </html>
